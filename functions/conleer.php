@@ -10,7 +10,7 @@
     }
        $buscar = $_POST['rut'];
        if (!empty($buscar) && $buscar!="") {
-           $sql = "SELECT * FROM alumno WHERE rut LIKE '%".$buscar."%' ORDER BY apellidos ASC";
+           $sql = "SELECT * FROM alumno WHERE rut = '".$buscar."' ORDER BY apellidos ASC";
            $query = mysqli_query($conn, $sql);
        }
 
